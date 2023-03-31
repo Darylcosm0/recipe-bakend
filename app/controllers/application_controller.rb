@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   include ActionController::Cookies
-  protect_from_forgery with: :null_session
+  skip_before_action :verify_authenticity_token
   helper_method :current_user
 
   before_action :set_default_response_format
