@@ -1,12 +1,12 @@
 class RegistrationsController < ApplicationController
   before_action :require_login, only: [:edit, :update]
-  def new
-    # ...
-    respond_to do |format|
-      format.html # Renders app/views/registrations/new.html.erb
-      format.json { render json: { message: "New registration created" } }
-    end
-  end
+  # def new
+  #   # ...
+  #   respond_to do |format|
+  #     format.html # Renders app/views/registrations/new.html.erb
+  #     format.json { render json: { message: "New registration created" } }
+  #   end
+  # end
   # def new
   #   @user = User.new
   # end
@@ -42,7 +42,10 @@ class RegistrationsController < ApplicationController
 
   private
 
+  private
+
   def user_params
-    params.permit(:user).permit(:username, :email, :password, :allergy_type)
+    params.require(:user).permit(:username, :email, :password, :password_confirmation, :allergy_type)
   end
+  
 end

@@ -3166,3 +3166,233 @@ Processing by RegistrationsController#new as */*
 Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 157)
 
 
+Started GET "/signup" for ::1 at 2023-03-31 12:24:50 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RegistrationsController#new as */*
+  Parameters: {"id"=>1, "username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt", "registration"=>{"id"=>1, "username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt"}}
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2675)
+
+
+Started GET "/signup/1" for ::1 at 2023-03-31 12:33:28 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/signup/1"):
+  
+Started GET "/signup/id" for ::1 at 2023-03-31 12:33:33 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/signup/id"):
+  
+Started GET "/signup/%7Bid%7D" for ::1 at 2023-03-31 12:33:54 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/signup/%7Bid%7D"):
+  
+Started GET "/signup/%7Bid%7D" for ::1 at 2023-03-31 12:33:55 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/signup/%7Bid%7D"):
+  
+Started GET "/signup/%7Bid%7D" for ::1 at 2023-03-31 12:33:56 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/signup/%7Bid%7D"):
+  
+Started GET "/signup/1" for ::1 at 2023-03-31 12:34:37 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/signup/1"):
+  
+Started GET "/signup/id" for ::1 at 2023-03-31 12:34:46 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/signup/id"):
+  
+Started GET "/signup/id/1" for ::1 at 2023-03-31 12:34:50 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/signup/id/1"):
+  
+Started GET "/signup/" for ::1 at 2023-03-31 12:34:53 +0300
+Processing by RegistrationsController#new as */*
+  Parameters: {"id"=>1, "username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt", "registration"=>{"id"=>1, "username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt"}}
+Completed 200 OK in 1ms (Views: 0.2ms | Allocations: 167)
+
+
+Started GET "/signup/" for ::1 at 2023-03-31 12:34:54 +0300
+Processing by RegistrationsController#new as */*
+  Parameters: {"id"=>1, "username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt", "registration"=>{"id"=>1, "username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt"}}
+Completed 200 OK in 1ms (Views: 0.1ms | Allocations: 161)
+
+
+Started GET "/signup/" for ::1 at 2023-03-31 12:34:55 +0300
+Processing by RegistrationsController#new as */*
+  Parameters: {"id"=>1, "username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt", "registration"=>{"id"=>1, "username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt"}}
+Completed 200 OK in 1ms (Views: 0.1ms | Allocations: 157)
+
+
+Started GET "/signup/" for ::1 at 2023-03-31 12:34:55 +0300
+Processing by RegistrationsController#new as */*
+  Parameters: {"id"=>1, "username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt", "registration"=>{"id"=>1, "username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt"}}
+Completed 200 OK in 1ms (Views: 0.1ms | Allocations: 161)
+
+
+Started GET "/signup/" for ::1 at 2023-03-31 12:34:56 +0300
+Processing by RegistrationsController#new as */*
+  Parameters: {"id"=>1, "username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt", "registration"=>{"id"=>1, "username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt"}}
+Completed 200 OK in 0ms (Views: 0.1ms | Allocations: 161)
+
+
+Started GET "/signup/0" for ::1 at 2023-03-31 12:35:02 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/signup/0"):
+  
+Started GET "/signup/1" for ::1 at 2023-03-31 12:35:05 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/signup/1"):
+  
+Started GET "/signup/1/" for ::1 at 2023-03-31 12:35:07 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/signup/1"):
+  
+Started GET "/signup/1/" for ::1 at 2023-03-31 12:35:07 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/signup/1"):
+  
+Started GET "/signup/1/" for ::1 at 2023-03-31 12:35:08 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/signup/1"):
+  
+Started GET "/signup/1/" for ::1 at 2023-03-31 12:35:09 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/signup/1"):
+  
+Started GET "/signup/" for ::1 at 2023-03-31 12:35:10 +0300
+Processing by RegistrationsController#new as */*
+  Parameters: {"id"=>1, "username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt", "registration"=>{"id"=>1, "username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt"}}
+Completed 200 OK in 1ms (Views: 0.2ms | Allocations: 159)
+
+
+Started GET "/signup/users" for ::1 at 2023-03-31 12:35:51 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/signup/users"):
+  
+Started GET "/users/1" for ::1 at 2023-03-31 12:35:59 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/1"):
+  
+Started GET "/users/1" for ::1 at 2023-03-31 12:36:00 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/1"):
+  
+Started GET "/users/id" for ::1 at 2023-03-31 12:36:04 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/id"):
+  
+Started GET "/signup" for ::1 at 2023-03-31 12:38:59 +0300
+Processing by RegistrationsController#new as */*
+  Parameters: {"id"=>1, "username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt", "registration"=>{"id"=>1, "username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt"}}
+Completed 200 OK in 1ms (Views: 0.2ms | Allocations: 160)
+
+
+Started POST "/signup" for ::1 at 2023-03-31 12:41:41 +0300
+Processing by RegistrationsController#create as */*
+  Parameters: {"id"=>1, "username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt", "registration"=>{"id"=>1, "username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt"}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameters: :id, :username, :email, :password, :password_confirmation, :allergy_type, :registration. Context: { controller: RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007f27111b3ca0>, params: {"id"=>1, "username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt", "controller"=>"registrations", "action"=>"create", "registration"=>{"id"=>1, "username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt"}} }[0m
+Completed 422 Unprocessable Entity in 44ms (Views: 0.2ms | ActiveRecord: 2.0ms | Allocations: 20475)
+
+
+Started POST "/signup" for ::1 at 2023-03-31 12:44:17 +0300
+Processing by RegistrationsController#create as */*
+  Parameters: {"id"=>1, "username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt", "registration"=>{"id"=>1, "username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt"}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameters: :id, :username, :email, :password, :password_confirmation, :allergy_type, :registration. Context: { controller: RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007f27080c9a50>, params: {"id"=>1, "username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt", "controller"=>"registrations", "action"=>"create", "registration"=>{"id"=>1, "username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt"}} }[0m
+Completed 422 Unprocessable Entity in 8ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 3968)
+
+
+Started POST "/signup" for ::1 at 2023-03-31 12:44:18 +0300
+Processing by RegistrationsController#create as */*
+  Parameters: {"id"=>1, "username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt", "registration"=>{"id"=>1, "username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt"}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameters: :id, :username, :email, :password, :password_confirmation, :allergy_type, :registration. Context: { controller: RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007f270420f8a0>, params: {"id"=>1, "username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt", "controller"=>"registrations", "action"=>"create", "registration"=>{"id"=>1, "username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt"}} }[0m
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1289)
+
+
+Started POST "/signup" for ::1 at 2023-03-31 12:46:26 +0300
+Processing by RegistrationsController#create as */*
+  Parameters: {"username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt", "registration"=>{"username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt"}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameters: :username, :email, :password, :password_confirmation, :allergy_type, :registration. Context: { controller: RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007f2704198a70>, params: {"username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt", "controller"=>"registrations", "action"=>"create", "registration"=>{"username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt"}} }[0m
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1283)
+
+
+Started POST "/signup" for ::1 at 2023-03-31 12:46:27 +0300
+Processing by RegistrationsController#create as */*
+  Parameters: {"username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt", "registration"=>{"username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt"}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameters: :username, :email, :password, :password_confirmation, :allergy_type, :registration. Context: { controller: RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007f271cc54348>, params: {"username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt", "controller"=>"registrations", "action"=>"create", "registration"=>{"username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt"}} }[0m
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1277)
+
+
+Started POST "/signup" for ::1 at 2023-03-31 12:46:28 +0300
+Processing by RegistrationsController#create as */*
+  Parameters: {"username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt", "registration"=>{"username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt"}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameters: :username, :email, :password, :password_confirmation, :allergy_type, :registration. Context: { controller: RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007f2710eb8730>, params: {"username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt", "controller"=>"registrations", "action"=>"create", "registration"=>{"username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt"}} }[0m
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1277)
+
+
+Started POST "/signup" for ::1 at 2023-03-31 12:46:28 +0300
+Processing by RegistrationsController#create as */*
+  Parameters: {"username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt", "registration"=>{"username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt"}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameters: :username, :email, :password, :password_confirmation, :allergy_type, :registration. Context: { controller: RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007f2710e8e598>, params: {"username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt", "controller"=>"registrations", "action"=>"create", "registration"=>{"username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt"}} }[0m
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1277)
+
+
+Started POST "/signup" for ::1 at 2023-03-31 12:46:28 +0300
+Processing by RegistrationsController#create as */*
+  Parameters: {"username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt", "registration"=>{"username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt"}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameters: :username, :email, :password, :password_confirmation, :allergy_type, :registration. Context: { controller: RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007f271cb430f8>, params: {"username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt", "controller"=>"registrations", "action"=>"create", "registration"=>{"username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt"}} }[0m
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1283)
+
+
+Started POST "/signup" for ::1 at 2023-03-31 12:46:29 +0300
+Processing by RegistrationsController#create as */*
+  Parameters: {"username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt", "registration"=>{"username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt"}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameters: :username, :email, :password, :password_confirmation, :allergy_type, :registration. Context: { controller: RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007f271caee508>, params: {"username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt", "controller"=>"registrations", "action"=>"create", "registration"=>{"username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt"}} }[0m
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1277)
+
+
+Started POST "/signup" for ::1 at 2023-03-31 12:49:02 +0300
+Processing by RegistrationsController#create as */*
+  Parameters: {"username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt", "registration"=>{"username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt"}}
+Can't verify CSRF token authenticity.
+Completed 400 Bad Request in 2ms (Allocations: 937)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/registrations_controller.rb:48:in `user_params'
+app/controllers/registrations_controller.rb:15:in `create'
+Started POST "/signup" for ::1 at 2023-03-31 12:49:04 +0300
+Processing by RegistrationsController#create as */*
+  Parameters: {"username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt", "registration"=>{"username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt"}}
+Can't verify CSRF token authenticity.
+Completed 400 Bad Request in 1ms (Allocations: 556)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/registrations_controller.rb:48:in `user_params'
+app/controllers/registrations_controller.rb:15:in `create'
+Started POST "/signup" for ::1 at 2023-03-31 12:50:22 +0300
+Processing by RegistrationsController#create as */*
+  Parameters: {"user"=>{"username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt"}, "registration"=>{"user"=>{"username"=>"abcdef123456", "email"=>"muchiri@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "allergy_type"=>"salt"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/registrations_controller.rb:17:in `block in create'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "allergy_type", "created_at", "updated_at", "password_reset_token") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["username", "abcdef123456"], ["email", "muchiri@mail.com"], ["password_digest", "[FILTERED]"], ["allergy_type", "salt"], ["created_at", "2023-03-31 09:50:22.251160"], ["updated_at", "2023-03-31 09:50:22.251160"], ["password_reset_token", "[FILTERED]"]]
+  ↳ app/controllers/registrations_controller.rb:17:in `block in create'
+  [1m[36mTRANSACTION (21.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/registrations_controller.rb:17:in `block in create'
+Completed 201 Created in 263ms (Views: 0.4ms | ActiveRecord: 22.5ms | Allocations: 5456)
+
+
