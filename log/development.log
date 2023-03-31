@@ -4026,3 +4026,28 @@ Processing by RecipesController#show as HTML
 Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.5ms | Allocations: 3611)
 
 
+Started POST "/signup" for 127.0.0.1 at 2023-03-31 12:08:10 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RegistrationsController#create as */*
+  Parameters: {"username"=>"wamae", "password"=>"[FILTERED]", "email"=>"chriswamae123@gmail.com", "registration"=>{"username"=>"wamae", "password"=>"[FILTERED]", "email"=>"chriswamae123@gmail.com"}}
+Can't verify CSRF token authenticity.
+Completed 400 Bad Request in 12ms (ActiveRecord: 0.0ms | Allocations: 7585)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/registrations_controller.rb:46:in `user_params'
+app/controllers/registrations_controller.rb:15:in `create'
+Started POST "/signup" for 127.0.0.1 at 2023-03-31 12:08:58 +0300
+Processing by RegistrationsController#create as */*
+  Parameters: {"username"=>"wamae", "password"=>"[FILTERED]", "email"=>"chriswamae123@gmail.com", "registration"=>{"username"=>"wamae", "password"=>"[FILTERED]", "email"=>"chriswamae123@gmail.com"}}
+Can't verify CSRF token authenticity.
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 558)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/registrations_controller.rb:46:in `user_params'
+app/controllers/registrations_controller.rb:15:in `create'
