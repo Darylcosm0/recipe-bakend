@@ -1,16 +1,6 @@
 class RegistrationsController < ApplicationController
   before_action :require_login, only: [:edit, :update]
-  # def new
-  #   # ...
-  #   respond_to do |format|
-  #     format.html # Renders app/views/registrations/new.html.erb
-  #     format.json { render json: { message: "New registration created" } }
-  #   end
-  # end
-  # def new
-  #   @user = User.new
-  # end
-
+  
   def create
     @user = User.new(user_params)
     respond_to do |format|
