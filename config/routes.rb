@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :allergies
   #User routes
+  get "user/:id",to: "users#show"
   get "login", to: "sessions#new"
   post "login", to: "sessions#create"
   get "logout", to: "sessions#destroy"
