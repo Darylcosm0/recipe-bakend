@@ -17,8 +17,10 @@ Rails.application.routes.draw do
   resources :ingredients, only:[:create,:destroy]
   resources :allergies, only:[:create,:destroy,:index]
   resources :user_recipes, only:[:create,:destroy]
-  get "/search", to: "recipes#search"
+  post "/search", to: "recipes#search"
   get "/sort-new", to: "recipes#sort_newest"
   get "/sort-old", to: "recipes#sort_oldest"
   delete "/recipe_labels", to: "recipe_labels#destroy"
 end
+
+
