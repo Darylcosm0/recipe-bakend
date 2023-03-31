@@ -6,6 +6,9 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 puts "Seeding..."
+#create a User
+User.create(username:"wamae",password:"wamae",password_confirmation:"wamae",email:"chriswamae123@gmaill.com")
+
 Recipe.create(title:"Beef stew",
               description:"is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
               instructions:"Add heayradejeakjavnnafj aeeeeeeeeeeekaae a iueafeafufea",
