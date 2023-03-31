@@ -6,13 +6,6 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 puts "Seeding..."
-#create Ingredients
-Ingredient.create(name:"Onion",recipe_id:1,quantity:2,measurement_unit:"pieces",calories:100)
-Ingredient.create(name:"Beef",recipe_id:1,quantity:2,measurement_unit:"kg",calories:50)
-Ingredient.create(name:"Olive oil",recipe_id:1,quantity:100,measurement_unit:"ml",calories:200)
-Ingredient.create(name:"Pepper",recipe_id:1,quantity:30,measurement_unit:"grams",calories:150)
-Ingredient.create(name:"Salt",recipe_id:1,quantity:20,measurement_unit:"grams",calories:90)
-#create Recipe
 Recipe.create(title:"Beef stew",
               description:"is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
               instructions:"Add heayradejeakjavnnafj aeeeeeeeeeeekaae a iueafeafufea",
@@ -23,6 +16,15 @@ Recipe.create(title:"Beef stew",
 # Recipe.create(title:"",description:"",instructions:"",cuisine:"",recipe_image:"",user_id:)
 # Recipe.create(title:"",description:"",instructions:"",cuisine:"",recipe_image:"",user_id:)
 # Recipe.create(title:"",description:"",instructions:"",cuisine:"",recipe_image:"",user_id:)
+
+#create Ingredients
+Ingredient.create(name:"Onion",recipe_id:1,quantity:2,measurement_unit:"pieces",calories:100)
+Ingredient.create(name:"Beef",recipe_id:1,quantity:2,measurement_unit:"kg",calories:50)
+Ingredient.create(name:"Olive oil",recipe_id:1,quantity:100,measurement_unit:"ml",calories:200)
+Ingredient.create(name:"Pepper",recipe_id:1,quantity:30,measurement_unit:"grams",calories:150)
+Ingredient.create(name:"Salt",recipe_id:1,quantity:20,measurement_unit:"grams",calories:90)
+#create Recipe
+
 #create UserRecipe
 # UserRecipe.create(user_id:"1",recipe_id:"1")
 # # UserRecipe.create(user_id:"",recipe_id:"")
