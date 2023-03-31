@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  recipe_id: 1
+  name: MyString
+  quantity: 1
+  measurement_unit: MyString
+  calories: 1
+
+two:
+  recipe_id: 1
+  name: MyString
+  quantity: 1
+  measurement_unit: MyString
+  calories: 1

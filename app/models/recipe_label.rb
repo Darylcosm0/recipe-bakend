@@ -1,0 +1,2 @@
+class RecipeLabel < ApplicationRecord
+end
