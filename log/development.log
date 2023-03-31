@@ -3125,3 +3125,79 @@ Migrating to CreateRecipeLabels (20230331031322)
   [1m[36mTRANSACTION (5.4ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAllergies (20230331031814)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "allergies" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "user_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230331031814"]]
+  [1m[36mTRANSACTION (8.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRecipe Create (0.4ms)[0m  [1m[32mINSERT INTO "recipes" ("title", "instructions", "description", "cuisine", "recipe_image", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Beef stew"], ["instructions", "Add heayradejeakjavnnafj aeeeeeeeeeeekaae a iueafeafufea"], ["description", "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."], ["cuisine", "Kenyan"], ["recipe_image", "https://deajfeja.com"], ["user_id", 1], ["created_at", "2023-03-31 03:28:21.950866"], ["updated_at", "2023-03-31 03:28:21.950866"]]
+  [1m[36mTRANSACTION (12.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("recipe_id", "name", "quantity", "measurement_unit", "calories", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["recipe_id", 1], ["name", "Onion"], ["quantity", 2], ["measurement_unit", "pieces"], ["calories", 100], ["created_at", "2023-03-31 03:28:35.854224"], ["updated_at", "2023-03-31 03:28:35.854224"]]
+  [1m[36mTRANSACTION (4.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("recipe_id", "name", "quantity", "measurement_unit", "calories", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["recipe_id", 1], ["name", "Beef"], ["quantity", 2], ["measurement_unit", "kg"], ["calories", 50], ["created_at", "2023-03-31 03:28:35.865739"], ["updated_at", "2023-03-31 03:28:35.865739"]]
+  [1m[36mTRANSACTION (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("recipe_id", "name", "quantity", "measurement_unit", "calories", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["recipe_id", 1], ["name", "Olive oil"], ["quantity", 100], ["measurement_unit", "ml"], ["calories", 200], ["created_at", "2023-03-31 03:28:35.874901"], ["updated_at", "2023-03-31 03:28:35.874901"]]
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("recipe_id", "name", "quantity", "measurement_unit", "calories", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["recipe_id", 1], ["name", "Pepper"], ["quantity", 30], ["measurement_unit", "grams"], ["calories", 150], ["created_at", "2023-03-31 03:28:35.885131"], ["updated_at", "2023-03-31 03:28:35.885131"]]
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("recipe_id", "name", "quantity", "measurement_unit", "calories", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["recipe_id", 1], ["name", "Salt"], ["quantity", 20], ["measurement_unit", "grams"], ["calories", 90], ["created_at", "2023-03-31 03:28:35.895238"], ["updated_at", "2023-03-31 03:28:35.895238"]]
+  [1m[36mTRANSACTION (4.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRecipe Create (0.2ms)[0m  [1m[32mINSERT INTO "recipes" ("title", "instructions", "description", "cuisine", "recipe_image", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Beef stew"], ["instructions", "Add heayradejeakjavnnafj aeeeeeeeeeeekaae a iueafeafufea"], ["description", "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."], ["cuisine", "Kenyan"], ["recipe_image", "https://deajfeja.com"], ["user_id", 1], ["created_at", "2023-03-31 03:28:35.902180"], ["updated_at", "2023-03-31 03:28:35.902180"]]
+  [1m[36mTRANSACTION (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAllergy Create (0.2ms)[0m  [1m[32mINSERT INTO "allergies" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Peanuts"], ["user_id", 1], ["created_at", "2023-03-31 03:28:35.911594"], ["updated_at", "2023-03-31 03:28:35.911594"]]
+  [1m[36mTRANSACTION (4.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAllergy Create (0.2ms)[0m  [1m[32mINSERT INTO "allergies" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Lactose"], ["user_id", 1], ["created_at", "2023-03-31 03:28:35.918338"], ["updated_at", "2023-03-31 03:28:35.918338"]]
+  [1m[36mTRANSACTION (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAllergy Create (0.2ms)[0m  [1m[32mINSERT INTO "allergies" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Chilli"], ["user_id", 1], ["created_at", "2023-03-31 03:28:35.924810"], ["updated_at", "2023-03-31 03:28:35.924810"]]
+  [1m[36mTRANSACTION (4.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLabel Create (0.2ms)[0m  [1m[32mINSERT INTO "labels" ("name", "color", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Highly Spicy"], ["color", "red"], ["created_at", "2023-03-31 03:28:35.939488"], ["updated_at", "2023-03-31 03:28:35.939488"]]
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLabel Create (0.2ms)[0m  [1m[32mINSERT INTO "labels" ("name", "color", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Mildly Spicy"], ["color", "blue"], ["created_at", "2023-03-31 03:28:35.946475"], ["updated_at", "2023-03-31 03:28:35.946475"]]
+  [1m[36mTRANSACTION (5.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLabel Create (0.2ms)[0m  [1m[32mINSERT INTO "labels" ("name", "color", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Moderately Spicy"], ["color", "green"], ["created_at", "2023-03-31 03:28:35.953427"], ["updated_at", "2023-03-31 03:28:35.953427"]]
+  [1m[36mTRANSACTION (5.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLabel Create (0.2ms)[0m  [1m[32mINSERT INTO "labels" ("name", "color", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Alcoholic"], ["color", "pink"], ["created_at", "2023-03-31 03:28:35.960899"], ["updated_at", "2023-03-31 03:28:35.960899"]]
+  [1m[36mTRANSACTION (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLabel Create (0.2ms)[0m  [1m[32mINSERT INTO "labels" ("name", "color", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Caffeinated"], ["color", "brown"], ["created_at", "2023-03-31 03:28:35.967979"], ["updated_at", "2023-03-31 03:28:35.967979"]]
+  [1m[36mTRANSACTION (4.9ms)[0m  [1m[36mcommit transaction[0m
