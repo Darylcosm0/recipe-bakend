@@ -3452,3 +3452,577 @@ Can't verify CSRF token authenticity.
 Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 753)
 
 
+Started POST "/sign-up" for 127.0.0.1 at 2023-03-31 11:03:48 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/sign-up"):
+  
+Started POST "/signup" for 127.0.0.1 at 2023-03-31 11:04:07 +0300
+Processing by RegistrationsController#create as */*
+  Parameters: {"username"=>"wamae", "password"=>"[FILTERED]", "email"=>"chriswamae123@gmail.com", "registration"=>{"username"=>"wamae", "password"=>"[FILTERED]", "email"=>"chriswamae123@gmail.com"}}
+Can't verify CSRF token authenticity.
+Completed 400 Bad Request in 17ms (ActiveRecord: 0.0ms | Allocations: 7604)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/registrations_controller.rb:46:in `user_params'
+app/controllers/registrations_controller.rb:15:in `create'
+Started GET "/signup" for 127.0.0.1 at 2023-03-31 11:04:50 +0300
+Processing by RegistrationsController#new as */*
+  Parameters: {"username"=>"wamae", "password"=>"[FILTERED]", "email"=>"chriswamae123@gmail.com", "registration"=>{"username"=>"wamae", "password"=>"[FILTERED]", "email"=>"chriswamae123@gmail.com"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 212)
+
+
+Started POST "/signup" for 127.0.0.1 at 2023-03-31 11:04:59 +0300
+Processing by RegistrationsController#create as */*
+  Parameters: {"username"=>"wamae", "password"=>"[FILTERED]", "email"=>"chriswamae123@gmail.com", "registration"=>{"username"=>"wamae", "password"=>"[FILTERED]", "email"=>"chriswamae123@gmail.com"}}
+Can't verify CSRF token authenticity.
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 557)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/registrations_controller.rb:46:in `user_params'
+app/controllers/registrations_controller.rb:15:in `create'
+Started GET "/signup" for 127.0.0.1 at 2023-03-31 11:07:15 +0300
+Processing by RegistrationsController#new as */*
+  Parameters: {"user"=>"wamae", "username"=>"wamae", "password"=>"[FILTERED]", "email"=>"chriswamae123@gmail.com", "registration"=>{"user"=>"wamae", "username"=>"wamae", "password"=>"[FILTERED]", "email"=>"chriswamae123@gmail.com"}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 160)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-03-31 11:09:34 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"wamae", "password"=>"[FILTERED]", "session"=>{"username"=>"wamae", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:11:in `create'
+Completed 422 Unprocessable Entity in 4ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 2223)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-03-31 11:10:23 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"chriswamae123@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"chriswamae123@gmail.com", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "chriswamae123@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:11:in `create'
+Completed 422 Unprocessable Entity in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 1137)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-03-31 11:10:53 +0300
+Processing by SessionsController#new as */*
+  Parameters: {"email"=>"chriswamae123@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"chriswamae123@gmail.com", "password"=>"[FILTERED]"}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 161)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-03-31 11:11:01 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"chriswamae123@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"chriswamae123@gmail.com", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "chriswamae123@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:11:in `create'
+Completed 422 Unprocessable Entity in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 568)
+
+
+Started POST "/logout" for 127.0.0.1 at 2023-03-31 11:11:43 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/logout"):
+  
+Started GET "/signup" for 127.0.0.1 at 2023-03-31 11:11:58 +0300
+Processing by RegistrationsController#new as */*
+  Parameters: {"user"=>"wamae", "username"=>"wamae", "password"=>"[FILTERED]", "email"=>"chriswamae123@gmail.com", "registration"=>{"user"=>"wamae", "username"=>"wamae", "password"=>"[FILTERED]", "email"=>"chriswamae123@gmail.com"}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 159)
+
+
+Started POST "/signup" for 127.0.0.1 at 2023-03-31 11:12:04 +0300
+Processing by RegistrationsController#create as */*
+  Parameters: {"user"=>"wamae", "username"=>"wamae", "password"=>"[FILTERED]", "email"=>"chriswamae123@gmail.com", "registration"=>{"user"=>"wamae", "username"=>"wamae", "password"=>"[FILTERED]", "email"=>"chriswamae123@gmail.com"}}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1679)
+
+
+  
+NoMethodError (undefined method `permit' for "wamae":String):
+  
+app/controllers/registrations_controller.rb:46:in `user_params'
+app/controllers/registrations_controller.rb:15:in `create'
+Started POST "/signup" for 127.0.0.1 at 2023-03-31 11:12:23 +0300
+Processing by RegistrationsController#create as */*
+  Parameters: {"username"=>"wamae", "password"=>"[FILTERED]", "email"=>"chriswamae123@gmail.com", "registration"=>{"username"=>"wamae", "password"=>"[FILTERED]", "email"=>"chriswamae123@gmail.com"}}
+Can't verify CSRF token authenticity.
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 555)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/registrations_controller.rb:46:in `user_params'
+app/controllers/registrations_controller.rb:15:in `create'
+Started GET "/signup" for 127.0.0.1 at 2023-03-31 11:12:30 +0300
+Processing by RegistrationsController#new as */*
+  Parameters: {"username"=>"wamae", "password"=>"[FILTERED]", "email"=>"chriswamae123@gmail.com", "registration"=>{"username"=>"wamae", "password"=>"[FILTERED]", "email"=>"chriswamae123@gmail.com"}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 160)
+
+
+Started POST "/signup" for 127.0.0.1 at 2023-03-31 11:12:34 +0300
+Processing by RegistrationsController#create as */*
+  Parameters: {"username"=>"wamae", "password"=>"[FILTERED]", "email"=>"chriswamae123@gmail.com", "registration"=>{"username"=>"wamae", "password"=>"[FILTERED]", "email"=>"chriswamae123@gmail.com"}}
+Can't verify CSRF token authenticity.
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 555)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/registrations_controller.rb:46:in `user_params'
+app/controllers/registrations_controller.rb:15:in `create'
+Started GET "/recipes/1" for 127.0.0.1 at 2023-03-31 11:16:38 +0300
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:27:in `show'
+  [1m[36mIngredient Load (0.7ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mLabel Load (0.3ms)[0m  [1m[34mSELECT "labels".* FROM "labels" INNER JOIN "recipe_labels" ON "labels"."id" = "recipe_labels"."label_id" WHERE "recipe_labels"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+Completed 200 OK in 79ms (Views: 46.7ms | ActiveRecord: 3.9ms | Allocations: 64072)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2023-03-31 11:16:38 +0300
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:27:in `show'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mLabel Load (0.2ms)[0m  [1m[34mSELECT "labels".* FROM "labels" INNER JOIN "recipe_labels" ON "labels"."id" = "recipe_labels"."label_id" WHERE "recipe_labels"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.6ms | Allocations: 3611)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2023-03-31 11:16:38 +0300
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:27:in `show'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mLabel Load (0.1ms)[0m  [1m[34mSELECT "labels".* FROM "labels" INNER JOIN "recipe_labels" ON "labels"."id" = "recipe_labels"."label_id" WHERE "recipe_labels"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+Completed 200 OK in 13ms (Views: 9.9ms | ActiveRecord: 0.7ms | Allocations: 3611)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2023-03-31 11:16:38 +0300
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:27:in `show'
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mLabel Load (0.2ms)[0m  [1m[34mSELECT "labels".* FROM "labels" INNER JOIN "recipe_labels" ON "labels"."id" = "recipe_labels"."label_id" WHERE "recipe_labels"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.5ms | Allocations: 3611)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2023-03-31 11:22:16 +0300
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:27:in `show'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mLabel Load (0.4ms)[0m  [1m[34mSELECT "labels".* FROM "labels" INNER JOIN "recipe_labels" ON "labels"."id" = "recipe_labels"."label_id" WHERE "recipe_labels"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+Completed 200 OK in 16ms (Views: 11.0ms | ActiveRecord: 1.7ms | Allocations: 3863)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2023-03-31 11:22:16 +0300
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:27:in `show'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mLabel Load (0.2ms)[0m  [1m[34mSELECT "labels".* FROM "labels" INNER JOIN "recipe_labels" ON "labels"."id" = "recipe_labels"."label_id" WHERE "recipe_labels"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+Completed 200 OK in 14ms (Views: 10.9ms | ActiveRecord: 0.8ms | Allocations: 3611)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2023-03-31 11:22:16 +0300
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:27:in `show'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mLabel Load (0.2ms)[0m  [1m[34mSELECT "labels".* FROM "labels" INNER JOIN "recipe_labels" ON "labels"."id" = "recipe_labels"."label_id" WHERE "recipe_labels"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+Completed 200 OK in 14ms (Views: 10.9ms | ActiveRecord: 0.8ms | Allocations: 3611)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2023-03-31 11:22:16 +0300
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:27:in `show'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mLabel Load (0.2ms)[0m  [1m[34mSELECT "labels".* FROM "labels" INNER JOIN "recipe_labels" ON "labels"."id" = "recipe_labels"."label_id" WHERE "recipe_labels"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+Completed 200 OK in 15ms (Views: 12.4ms | ActiveRecord: 0.8ms | Allocations: 3611)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2023-03-31 11:23:54 +0300
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:27:in `show'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mLabel Load (0.2ms)[0m  [1m[34mSELECT "labels".* FROM "labels" INNER JOIN "recipe_labels" ON "labels"."id" = "recipe_labels"."label_id" WHERE "recipe_labels"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+Completed 200 OK in 13ms (Views: 10.3ms | ActiveRecord: 0.7ms | Allocations: 3623)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2023-03-31 11:23:54 +0300
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:27:in `show'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mLabel Load (0.3ms)[0m  [1m[34mSELECT "labels".* FROM "labels" INNER JOIN "recipe_labels" ON "labels"."id" = "recipe_labels"."label_id" WHERE "recipe_labels"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+Completed 200 OK in 14ms (Views: 11.1ms | ActiveRecord: 0.8ms | Allocations: 3611)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2023-03-31 11:23:54 +0300
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:27:in `show'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mLabel Load (0.2ms)[0m  [1m[34mSELECT "labels".* FROM "labels" INNER JOIN "recipe_labels" ON "labels"."id" = "recipe_labels"."label_id" WHERE "recipe_labels"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+Completed 200 OK in 12ms (Views: 9.3ms | ActiveRecord: 0.8ms | Allocations: 3611)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2023-03-31 11:23:54 +0300
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:27:in `show'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mLabel Load (0.2ms)[0m  [1m[34mSELECT "labels".* FROM "labels" INNER JOIN "recipe_labels" ON "labels"."id" = "recipe_labels"."label_id" WHERE "recipe_labels"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+Completed 200 OK in 12ms (Views: 9.2ms | ActiveRecord: 0.6ms | Allocations: 3611)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2023-03-31 11:23:58 +0300
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:27:in `show'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mLabel Load (0.1ms)[0m  [1m[34mSELECT "labels".* FROM "labels" INNER JOIN "recipe_labels" ON "labels"."id" = "recipe_labels"."label_id" WHERE "recipe_labels"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+Completed 200 OK in 13ms (Views: 10.0ms | ActiveRecord: 0.7ms | Allocations: 3612)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2023-03-31 11:23:58 +0300
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:27:in `show'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mLabel Load (0.2ms)[0m  [1m[34mSELECT "labels".* FROM "labels" INNER JOIN "recipe_labels" ON "labels"."id" = "recipe_labels"."label_id" WHERE "recipe_labels"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+Completed 200 OK in 14ms (Views: 9.9ms | ActiveRecord: 0.7ms | Allocations: 3611)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2023-03-31 11:23:58 +0300
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:27:in `show'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mLabel Load (0.2ms)[0m  [1m[34mSELECT "labels".* FROM "labels" INNER JOIN "recipe_labels" ON "labels"."id" = "recipe_labels"."label_id" WHERE "recipe_labels"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+Completed 200 OK in 13ms (Views: 9.9ms | ActiveRecord: 0.7ms | Allocations: 3612)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2023-03-31 11:23:58 +0300
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:27:in `show'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mLabel Load (0.2ms)[0m  [1m[34mSELECT "labels".* FROM "labels" INNER JOIN "recipe_labels" ON "labels"."id" = "recipe_labels"."label_id" WHERE "recipe_labels"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+Completed 200 OK in 12ms (Views: 9.0ms | ActiveRecord: 0.7ms | Allocations: 3611)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2023-03-31 11:25:45 +0300
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:27:in `show'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mLabel Load (0.2ms)[0m  [1m[34mSELECT "labels".* FROM "labels" INNER JOIN "recipe_labels" ON "labels"."id" = "recipe_labels"."label_id" WHERE "recipe_labels"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+Completed 200 OK in 16ms (Views: 13.5ms | ActiveRecord: 0.7ms | Allocations: 3611)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2023-03-31 11:25:45 +0300
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:27:in `show'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mLabel Load (0.2ms)[0m  [1m[34mSELECT "labels".* FROM "labels" INNER JOIN "recipe_labels" ON "labels"."id" = "recipe_labels"."label_id" WHERE "recipe_labels"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+Completed 200 OK in 18ms (Views: 13.8ms | ActiveRecord: 0.8ms | Allocations: 3611)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2023-03-31 11:25:45 +0300
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:27:in `show'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mLabel Load (0.2ms)[0m  [1m[34mSELECT "labels".* FROM "labels" INNER JOIN "recipe_labels" ON "labels"."id" = "recipe_labels"."label_id" WHERE "recipe_labels"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 0.7ms | Allocations: 3611)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2023-03-31 11:25:45 +0300
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:27:in `show'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mLabel Load (0.2ms)[0m  [1m[34mSELECT "labels".* FROM "labels" INNER JOIN "recipe_labels" ON "labels"."id" = "recipe_labels"."label_id" WHERE "recipe_labels"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+Completed 200 OK in 20ms (Views: 17.4ms | ActiveRecord: 0.7ms | Allocations: 3612)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2023-03-31 11:26:42 +0300
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:27:in `show'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mLabel Load (0.2ms)[0m  [1m[34mSELECT "labels".* FROM "labels" INNER JOIN "recipe_labels" ON "labels"."id" = "recipe_labels"."label_id" WHERE "recipe_labels"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+Completed 200 OK in 14ms (Views: 10.8ms | ActiveRecord: 0.8ms | Allocations: 3611)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2023-03-31 11:26:42 +0300
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:27:in `show'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mLabel Load (0.2ms)[0m  [1m[34mSELECT "labels".* FROM "labels" INNER JOIN "recipe_labels" ON "labels"."id" = "recipe_labels"."label_id" WHERE "recipe_labels"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 0.6ms | Allocations: 3611)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2023-03-31 11:26:42 +0300
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:27:in `show'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mLabel Load (0.3ms)[0m  [1m[34mSELECT "labels".* FROM "labels" INNER JOIN "recipe_labels" ON "labels"."id" = "recipe_labels"."label_id" WHERE "recipe_labels"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+Completed 200 OK in 12ms (Views: 9.2ms | ActiveRecord: 0.8ms | Allocations: 3611)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2023-03-31 11:26:43 +0300
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:27:in `show'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mLabel Load (0.2ms)[0m  [1m[34mSELECT "labels".* FROM "labels" INNER JOIN "recipe_labels" ON "labels"."id" = "recipe_labels"."label_id" WHERE "recipe_labels"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+Completed 200 OK in 14ms (Views: 11.5ms | ActiveRecord: 0.8ms | Allocations: 3611)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2023-03-31 11:26:49 +0300
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:27:in `show'
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mLabel Load (0.1ms)[0m  [1m[34mSELECT "labels".* FROM "labels" INNER JOIN "recipe_labels" ON "labels"."id" = "recipe_labels"."label_id" WHERE "recipe_labels"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 0.6ms | Allocations: 3611)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2023-03-31 11:26:49 +0300
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:27:in `show'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mLabel Load (0.1ms)[0m  [1m[34mSELECT "labels".* FROM "labels" INNER JOIN "recipe_labels" ON "labels"."id" = "recipe_labels"."label_id" WHERE "recipe_labels"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+Completed 200 OK in 13ms (Views: 9.9ms | ActiveRecord: 0.7ms | Allocations: 3611)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2023-03-31 11:26:49 +0300
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:27:in `show'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mLabel Load (0.1ms)[0m  [1m[34mSELECT "labels".* FROM "labels" INNER JOIN "recipe_labels" ON "labels"."id" = "recipe_labels"."label_id" WHERE "recipe_labels"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 0.5ms | Allocations: 3611)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2023-03-31 11:26:49 +0300
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:27:in `show'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mLabel Load (0.1ms)[0m  [1m[34mSELECT "labels".* FROM "labels" INNER JOIN "recipe_labels" ON "labels"."id" = "recipe_labels"."label_id" WHERE "recipe_labels"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+Completed 200 OK in 12ms (Views: 9.0ms | ActiveRecord: 0.6ms | Allocations: 3611)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2023-03-31 11:27:15 +0300
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:27:in `show'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mLabel Load (0.1ms)[0m  [1m[34mSELECT "labels".* FROM "labels" INNER JOIN "recipe_labels" ON "labels"."id" = "recipe_labels"."label_id" WHERE "recipe_labels"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 0.7ms | Allocations: 3611)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2023-03-31 11:27:15 +0300
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:27:in `show'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mLabel Load (0.2ms)[0m  [1m[34mSELECT "labels".* FROM "labels" INNER JOIN "recipe_labels" ON "labels"."id" = "recipe_labels"."label_id" WHERE "recipe_labels"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+Completed 200 OK in 11ms (Views: 8.2ms | ActiveRecord: 0.6ms | Allocations: 3611)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2023-03-31 11:27:15 +0300
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:27:in `show'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mLabel Load (0.1ms)[0m  [1m[34mSELECT "labels".* FROM "labels" INNER JOIN "recipe_labels" ON "labels"."id" = "recipe_labels"."label_id" WHERE "recipe_labels"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+Completed 200 OK in 14ms (Views: 11.2ms | ActiveRecord: 0.5ms | Allocations: 3611)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2023-03-31 11:27:15 +0300
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:27:in `show'
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mLabel Load (0.1ms)[0m  [1m[34mSELECT "labels".* FROM "labels" INNER JOIN "recipe_labels" ON "labels"."id" = "recipe_labels"."label_id" WHERE "recipe_labels"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.5ms | Allocations: 3611)
+
+
