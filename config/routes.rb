@@ -9,9 +9,10 @@ Rails.application.routes.draw do
   post "signup", to: "registrations#create"
   get "account/edit", to: "registrations#edit", as: "edit_registration"
   get '/password_resets/validate_token', to: 'password_resets#validate_token', format: :json
+  delete "/recipe_label", to: "recipe_labels#destroy"
 
   #Recipe routes
-  resources :recipe_labels
+  resources :recipe_labels,except:[:destroy]
   resources :reviews
   resources :labels
   resources :recipes 
