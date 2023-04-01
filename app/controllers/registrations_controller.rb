@@ -1,6 +1,10 @@
 class RegistrationsController < ApplicationController
   before_action :require_login, only: [:edit, :update]
 
+  def new
+    render json: { message: "Sign up" }
+  end
+  
   def create
     @user = User.new(user_params)
     respond_to do |format|
