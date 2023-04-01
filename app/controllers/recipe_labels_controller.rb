@@ -1,6 +1,7 @@
 class RecipeLabelsController < ApplicationController
     def create 
         recipe_label = RecipeLabel.create(allowed_params)
+        render json: recipe_label
         end
       
         def destroy 
