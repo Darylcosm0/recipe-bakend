@@ -1,12 +1,9 @@
 class SessionsController < ApplicationController
-  # def new
-    
-  #   respond_to do |format|
-  #     format.html 
-  #     format.json { render json: { message: "New session created" } }
-  #   end
-  # end
-
+ 
+  def new
+   render json: { message: "Login" }
+  end
+  
   def create
     user = User.find_by(email: params[:email])
     if user && user.authenticate(params[:password])
