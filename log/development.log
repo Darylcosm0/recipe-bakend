@@ -5538,3 +5538,119 @@ Processing by RecipesController#create as */*
 Completed 200 OK in 15ms (Views: 0.5ms | ActiveRecord: 7.8ms | Allocations: 2993)
 
 
+Started GET "/recipes/1" for 127.0.0.1 at 2023-04-01 10:32:14 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ArgumentError (The :dependent option must be one of [:destroy, :delete_all, :nullify, :restrict_with_error, :restrict_with_exception, :destroy_async], but is :delete):
+  
+app/models/recipe.rb:3:in `<class:Recipe>'
+app/models/recipe.rb:1:in `<main>'
+Started GET "/recipes/1" for 127.0.0.1 at 2023-04-01 10:32:51 +0300
+Processing by RecipesController#show as */*
+  Parameters: {"title"=>"Yoghurt", "description"=>"The quick brown fox jumped over the lazy dog", "instructions"=>"Cook for ten minutes", "cuisine"=>"Ugandan", "recipe_image"=>"", "user_id"=>1, "id"=>"1", "recipe"=>{"title"=>"Yoghurt", "instructions"=>"Cook for ten minutes", "description"=>"The quick brown fox jumped over the lazy dog", "cuisine"=>"Ugandan", "recipe_image"=>"", "user_id"=>1}}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:27:in `show'
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mLabel Load (0.2ms)[0m  [1m[34mSELECT "labels".* FROM "labels" INNER JOIN "recipe_labels" ON "labels"."id" = "recipe_labels"."label_id" WHERE "recipe_labels"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+Completed 200 OK in 138ms (Views: 103.8ms | ActiveRecord: 3.9ms | Allocations: 61148)
+
+
+Started DELETE "/recipes/1" for 127.0.0.1 at 2023-04-01 10:32:59 +0300
+Processing by RecipesController#destroy as */*
+  Parameters: {"title"=>"Yoghurt", "description"=>"The quick brown fox jumped over the lazy dog", "instructions"=>"Cook for ten minutes", "cuisine"=>"Ugandan", "recipe_image"=>"", "user_id"=>1, "id"=>"1", "recipe"=>{"title"=>"Yoghurt", "instructions"=>"Cook for ten minutes", "description"=>"The quick brown fox jumped over the lazy dog", "cuisine"=>"Ugandan", "recipe_image"=>"", "user_id"=>1}}
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:10:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/recipes_controller.rb:11:in `destroy'
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:11:in `destroy'
+  [1m[36mIngredient Destroy (1.0ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/recipes_controller.rb:11:in `destroy'
+  [1m[36mIngredient Destroy (0.1ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/recipes_controller.rb:11:in `destroy'
+  [1m[36mIngredient Destroy (0.1ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/recipes_controller.rb:11:in `destroy'
+  [1m[36mIngredient Destroy (0.1ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/recipes_controller.rb:11:in `destroy'
+  [1m[36mIngredient Destroy (0.1ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/recipes_controller.rb:11:in `destroy'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:11:in `destroy'
+  [1m[36mRecipeLabel Load (0.2ms)[0m  [1m[34mSELECT "recipe_labels".* FROM "recipe_labels" WHERE "recipe_labels"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:11:in `destroy'
+  [1m[36mRecipe Destroy (0.2ms)[0m  [1m[31mDELETE FROM "recipes" WHERE "recipes"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/recipes_controller.rb:11:in `destroy'
+  [1m[36mTRANSACTION (18.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/recipes_controller.rb:11:in `destroy'
+No template found for RecipesController#destroy, rendering head :no_content
+Completed 204 No Content in 44ms (ActiveRecord: 21.1ms | Allocations: 8533)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2023-04-01 10:33:06 +0300
+Processing by RecipesController#index as */*
+  Parameters: {"title"=>"Yoghurt", "description"=>"The quick brown fox jumped over the lazy dog", "instructions"=>"Cook for ten minutes", "cuisine"=>"Ugandan", "recipe_image"=>"", "user_id"=>1, "recipe"=>{"title"=>"Yoghurt", "instructions"=>"Cook for ten minutes", "description"=>"The quick brown fox jumped over the lazy dog", "cuisine"=>"Ugandan", "recipe_image"=>"", "user_id"=>1}}
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:16:in `index'
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 2]]
+  ↳ app/controllers/recipes_controller.rb:16:in `index'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?[0m  [["recipe_id", 2]]
+  ↳ app/controllers/recipes_controller.rb:16:in `index'
+  [1m[36mLabel Load (0.1ms)[0m  [1m[34mSELECT "labels".* FROM "labels" INNER JOIN "recipe_labels" ON "labels"."id" = "recipe_labels"."label_id" WHERE "recipe_labels"."recipe_id" = ?[0m  [["recipe_id", 2]]
+  ↳ app/controllers/recipes_controller.rb:16:in `index'
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 3]]
+  ↳ app/controllers/recipes_controller.rb:16:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?[0m  [["recipe_id", 3]]
+  ↳ app/controllers/recipes_controller.rb:16:in `index'
+  [1m[36mLabel Load (0.1ms)[0m  [1m[34mSELECT "labels".* FROM "labels" INNER JOIN "recipe_labels" ON "labels"."id" = "recipe_labels"."label_id" WHERE "recipe_labels"."recipe_id" = ?[0m  [["recipe_id", 3]]
+  ↳ app/controllers/recipes_controller.rb:16:in `index'
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 4]]
+  ↳ app/controllers/recipes_controller.rb:16:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?[0m  [["recipe_id", 4]]
+  ↳ app/controllers/recipes_controller.rb:16:in `index'
+  [1m[36mLabel Load (0.1ms)[0m  [1m[34mSELECT "labels".* FROM "labels" INNER JOIN "recipe_labels" ON "labels"."id" = "recipe_labels"."label_id" WHERE "recipe_labels"."recipe_id" = ?[0m  [["recipe_id", 4]]
+  ↳ app/controllers/recipes_controller.rb:16:in `index'
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 5]]
+  ↳ app/controllers/recipes_controller.rb:16:in `index'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?[0m  [["recipe_id", 5]]
+  ↳ app/controllers/recipes_controller.rb:16:in `index'
+  [1m[36mLabel Load (0.1ms)[0m  [1m[34mSELECT "labels".* FROM "labels" INNER JOIN "recipe_labels" ON "labels"."id" = "recipe_labels"."label_id" WHERE "recipe_labels"."recipe_id" = ?[0m  [["recipe_id", 5]]
+  ↳ app/controllers/recipes_controller.rb:16:in `index'
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 6]]
+  ↳ app/controllers/recipes_controller.rb:16:in `index'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?[0m  [["recipe_id", 6]]
+  ↳ app/controllers/recipes_controller.rb:16:in `index'
+  [1m[36mLabel Load (0.1ms)[0m  [1m[34mSELECT "labels".* FROM "labels" INNER JOIN "recipe_labels" ON "labels"."id" = "recipe_labels"."label_id" WHERE "recipe_labels"."recipe_id" = ?[0m  [["recipe_id", 6]]
+  ↳ app/controllers/recipes_controller.rb:16:in `index'
+Completed 200 OK in 59ms (Views: 55.9ms | ActiveRecord: 2.2ms | Allocations: 13332)
+
+
+Started GET "/recipes/2" for 127.0.0.1 at 2023-04-01 10:33:14 +0300
+Processing by RecipesController#show as */*
+  Parameters: {"title"=>"Yoghurt", "description"=>"The quick brown fox jumped over the lazy dog", "instructions"=>"Cook for ten minutes", "cuisine"=>"Ugandan", "recipe_image"=>"", "user_id"=>1, "id"=>"2", "recipe"=>{"title"=>"Yoghurt", "instructions"=>"Cook for ten minutes", "description"=>"The quick brown fox jumped over the lazy dog", "cuisine"=>"Ugandan", "recipe_image"=>"", "user_id"=>1}}
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:27:in `show'
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 2]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?[0m  [["recipe_id", 2]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+  [1m[36mLabel Load (0.1ms)[0m  [1m[34mSELECT "labels".* FROM "labels" INNER JOIN "recipe_labels" ON "labels"."id" = "recipe_labels"."label_id" WHERE "recipe_labels"."recipe_id" = ?[0m  [["recipe_id", 2]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.5ms | Allocations: 2985)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2023-04-01 10:33:16 +0300
+Processing by RecipesController#show as */*
+  Parameters: {"title"=>"Yoghurt", "description"=>"The quick brown fox jumped over the lazy dog", "instructions"=>"Cook for ten minutes", "cuisine"=>"Ugandan", "recipe_image"=>"", "user_id"=>1, "id"=>"1", "recipe"=>{"title"=>"Yoghurt", "instructions"=>"Cook for ten minutes", "description"=>"The quick brown fox jumped over the lazy dog", "cuisine"=>"Ugandan", "recipe_image"=>"", "user_id"=>1}}
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:27:in `show'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms | Allocations: 910)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=1):
+  
+app/controllers/recipes_controller.rb:27:in `show'

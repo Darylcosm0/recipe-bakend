@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   resources :recipe_labels
   resources :reviews
   resources :labels
-  resources :recipes,except:[:destroy]
+  resources :recipes 
   resources :ingredients, only:[:create,:destroy]
   resources :allergies, only:[:create,:destroy,:index]
   resources :user_recipes, only:[:create,:destroy]
