@@ -6424,3 +6424,26 @@ Processing by SessionsController#new as */*
 Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 113)
 
 
+Started GET "/ws" for ::1 at 2023-04-02 02:51:08 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/ws" for ::1 at 2023-04-02 02:51:17 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/ws" for ::1 at 2023-04-02 02:51:34 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/allergies/1" for 127.0.0.1 at 2023-04-02 02:51:37 +0300
+Processing by AllergiesController#show as */*
+  Parameters: {"title"=>"Yoghurt", "description"=>"The quick brown fox jumped over the lazy dog", "instructions"=>"Cook for ten minutes", "cuisine"=>"Ugandan", "recipe_image"=>"", "user_id"=>1, "id"=>"1", "allergy"=>{"user_id"=>1}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/allergies_controller.rb:3:in `show'
+  [1m[36mAllergy Load (0.2ms)[0m  [1m[34mSELECT "allergies".* FROM "allergies" WHERE "allergies"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/allergies_controller.rb:5:in `show'
+Completed 200 OK in 81ms (Views: 29.0ms | ActiveRecord: 1.5ms | Allocations: 45191)
+
+

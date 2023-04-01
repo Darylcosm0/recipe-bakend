@@ -1,6 +1,7 @@
 class AllergiesController < ApplicationController
-    def index
-        user_allergies = Allergy.all
+    def show
+        user = User.find(params[:id])
+        user_allergies = user.allergies
         render json: user_allergies
        end
     
