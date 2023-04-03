@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   post "signup", to: "registrations#create"
   get "account/edit", to: "registrations#edit", as: "edit_registration"
   get '/password_resets/validate_token', to: 'password_resets#validate_token', format: :json
-  delete "/recipe_label", to: "recipe_labels#destroy"
+  post "/recipe_label", to: "recipe_labels#destroy"
 
   #Recipe routes
   resources :recipe_labels,except:[:destroy]
@@ -22,7 +22,6 @@ Rails.application.routes.draw do
   post "/search", to: "recipes#search"
   get "/sort-new", to: "recipes#sort_newest"
   get "/sort-old", to: "recipes#sort_oldest"
-  post "/recipe_labels", to: "recipe_labels#destroy"
 end
 
 
