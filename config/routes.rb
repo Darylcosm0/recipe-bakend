@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   post "/search", to: "recipes#search"
   get "/sort-new", to: "recipes#sort_newest"
   get "/sort-old", to: "recipes#sort_oldest"
-  delete "/recipe_labels", to: "recipe_labels#destroy"
+  post "/recipe_labels", to: "recipe_labels#destroy"
 end
 
 
